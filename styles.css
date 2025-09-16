@@ -1,0 +1,271 @@
+/*
+  Create Your Profile - Responsive Styles
+  - Desktop and Mobile views
+  - Colors and typography per assignment brief
+*/
+
+/* CSS Variables */
+:root {
+  --color-page-bg: #192833;
+  --color-form-bg: #2B414F; /* Form background */
+  --color-heading: #FFFFFF; /* Headings */
+  --color-label: #C6B98B;   /* Labels */
+  --color-input-text: #999999; /* Input text & placeholder */
+  --color-primary: #295BFF; /* Submit button */
+  --color-white: #FFFFFF;
+
+  --radius-md: 8px; /* Border radius for inputs and card */
+  --input-height: 40px; /* Consistent control height */
+
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;  /* Input vertical padding */
+  --space-md: 16px;  /* Input horizontal padding */
+  --space-lg: 24px;  /* Gap between fields */
+  --space-xl: 32px;  /* Top padding */
+  --space-2xl: 40px; /* Side padding */
+
+  --font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--color-heading);
+  background-color: var(--color-page-bg);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; clip-path: inset(50%);
+  border: 0; padding: 0; margin: -1px;
+}
+
+/* Header */
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-xl) var(--space-2xl) 0 var(--space-2xl);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.page-title {
+  font-size: 24px; /* Heading size */
+  line-height: 1.2;
+  font-weight: 700; /* Bold/Semibold */
+  margin: 0;
+  color: var(--color-heading);
+}
+
+.header-right .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.user-email {
+  font-size: 12px;
+  color: #b9c6cf;
+}
+
+/* Main & Form Card */
+.main {
+  padding: var(--space-xl) var(--space-2xl) var(--space-2xl) var(--space-2xl);
+}
+
+.form-section {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.profile-form {
+  background: var(--color-form-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.form-group + .form-group {
+  margin-top: var(--space-lg);
+}
+
+.group-label {
+  font-size: 14px; /* Label size */
+  font-weight: 500; /* Medium */
+  color: var(--color-label);
+  margin-bottom: var(--space-sm);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile default */
+  gap: var(--space-md);
+}
+
+.form-field label {
+  display: block;
+  font-size: 14px; /* Label size */
+  font-weight: 500; /* Medium */
+  color: var(--color-label);
+  margin-bottom: var(--space-xs);
+}
+
+/* Inputs & Selects */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  height: var(--input-height);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: #344C5B; /* Light text field against dark background */
+  color: var(--color-input-text);
+  padding: var(--space-sm) var(--space-2xl) var(--space-sm) var(--space-md);
+  font-size: 14px; /* Input text */
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--color-input-text);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23C6B98B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+/* Checkbox */
+.checkbox-row {
+  margin-top: var(--space-md);
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 14px;
+  color: var(--color-label);
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  background: #344C5B;
+  display: grid;
+  place-content: center;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/contain no-repeat;
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-md); /* At least 16px between buttons */
+  margin-top: var(--space-lg);
+}
+
+.btn {
+  height: var(--input-height);
+  padding: 0 var(--space-xl);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-size: 14px; /* Button text */
+  font-weight: 400; /* Regular */
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+html, body, .main {
+  overflow-x: hidden;
+}
+
+/* Mobile-specific header tweaks */
+@media (max-width: 600px) {
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+  .header-right .user-info {
+    align-items: flex-start;
+  }
+}
+
