@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Your Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-left">
+        <img class="logo" src="./assets/logo.svg" alt="Company Logo" />
+        <h1 class="page-title">Create Your Profile</h1>
+      </div>
+      <div class="header-right">
+        <div class="avatar" aria-hidden="true">JD</div>
+        <div class="user-meta">
+          <div class="user-name">Jane Doe</div>
+          <div class="user-email">jane.doe@example.com</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content" role="main">
+      <section class="form-section" aria-labelledby="profile-form-heading">
+        <h2 id="profile-form-heading" class="visually-hidden">Profile Details</h2>
+        <form class="profile-form" action="#" method="post" novalidate>
+          <div class="form-grid">
+            <!-- Your Name -->
+            <div class="form-field">
+              <label for="firstName">First Name</label>
+              <input id="firstName" name="firstName" type="text" class="input" placeholder="Enter first name" />
+            </div>
+            <div class="form-field">
+              <label for="lastName">Last Name</label>
+              <input id="lastName" name="lastName" type="text" class="input" placeholder="Enter last name" />
+            </div>
+
+            <!-- Contact -->
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" class="input" placeholder="name@company.com" />
+            </div>
+            <div class="form-field">
+              <label for="mobile">Mobile No</label>
+              <input id="mobile" name="mobile" type="tel" class="input" placeholder="(000) 000-0000" />
+            </div>
+
+            <!-- Role & Specialty -->
+            <div class="form-field">
+              <label for="role">Select Primary Role</label>
+              <div class="select-wrapper">
+                <select id="role" name="role" class="select">
+                  <option value="" selected disabled>Select role</option>
+                  <option>Director</option>
+                  <option>Producer</option>
+                  <option>Editor</option>
+                  <option>DP / Cinematographer</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="specialty">Specialty Type</label>
+              <div class="select-wrapper">
+                <select id="specialty" name="specialty" class="select">
+                  <option value="" selected disabled>Select specialty</option>
+                  <option>Narrative</option>
+                  <option>Documentary</option>
+                  <option>Commercial</option>
+                  <option>Music Video</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Producer Checkbox (full width) -->
+            <div class="form-field form-field--full">
+              <label class="checkbox">
+                <input id="isProducer" name="isProducer" type="checkbox" />
+                <span class="checkbox-label">Is this user a producer?</span>
+              </label>
+            </div>
+
+            <!-- Location -->
+            <div class="form-field">
+              <label for="country">Location (Country)</label>
+              <div class="select-wrapper">
+                <select id="country" name="country" class="select">
+                  <option value="" selected disabled>Select country</option>
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>United Kingdom</option>
+                  <option>Australia</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="city">Location (City)</label>
+              <div class="select-wrapper">
+                <select id="city" name="city" class="select">
+                  <option value="" selected disabled>Select city</option>
+                  <option>New York</option>
+                  <option>Los Angeles</option>
+                  <option>Toronto</option>
+                  <option>London</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footnote">© 2025 Your Company</p>
+    </footer>
+
+    <!-- Decorative SVG for select arrows (hidden, referenced via CSS) -->
+    <svg width="0" height="0" class="hidden">
+      <defs>
+        <symbol id="chevron-down" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+        </symbol>
+      </defs>
+    </svg>
+  </body>
+  </html>
+
 
