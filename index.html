@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Your Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="header-left">
+        <img class="logo" src="assets/logo.svg" alt="Company logo" />
+        <h1 class="page-title">Create Your Profile</h1>
+      </div>
+      <div class="header-right">
+        <div class="user-info" aria-label="Signed in user">
+          <div class="user-name">Alex Johnson</div>
+          <div class="user-email">alex.johnson@example.com</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="form-section" aria-labelledby="profileFormHeading">
+        <form class="profile-form" action="#" method="post" novalidate>
+          <h2 id="profileFormHeading" class="visually-hidden">Profile details form</h2>
+
+          <div class="form-group">
+            <div class="group-label">Your Name</div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter first name" />
+              </div>
+              <div class="form-field">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter last name" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="group-label">Contact</div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" />
+              </div>
+              <div class="form-field">
+                <label for="mobile">Mobile No</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="(000) 000-0000" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="group-label">Role</div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="role">Select Primary Role</label>
+                <div class="select-wrapper">
+                  <select id="role" name="role">
+                    <option value="" selected>Select role</option>
+                    <option>Producer</option>
+                    <option>Director</option>
+                    <option>Editor</option>
+                    <option>Writer</option>
+                    <option>Actor</option>
+                    <option>Photographer</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="specialty">Specialty Type</label>
+                <div class="select-wrapper">
+                  <select id="specialty" name="specialty">
+                    <option value="" selected>Select specialty</option>
+                    <option>Film</option>
+                    <option>Television</option>
+                    <option>Music</option>
+                    <option>Advertising</option>
+                    <option>Documentary</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="checkbox-row">
+              <label class="checkbox-label">
+                <input type="checkbox" id="isProducer" name="isProducer" />
+                <span class="custom-checkbox" aria-hidden="true"></span>
+                Is this user a producer?
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="group-label">Location</div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="country">Country</label>
+                <div class="select-wrapper">
+                  <select id="country" name="country">
+                    <option value="" selected>Select country</option>
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>United Kingdom</option>
+                    <option>Australia</option>
+                    <option>India</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="region">State / Region</label>
+                <div class="select-wrapper">
+                  <select id="region" name="region">
+                    <option value="" selected>Select state / region</option>
+                    <option>California</option>
+                    <option>New York</option>
+                    <option>Texas</option>
+                    <option>Ontario</option>
+                    <option>Queensland</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+  
+</html>
+
 
